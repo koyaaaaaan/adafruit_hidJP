@@ -3,7 +3,8 @@ This project is for Japanese keyboard type 106 or 109.
 Sorry to describe only in Japanese.
 
 # 概要
-Raspberry pi pico の Circuitpythonで提供されているUSBキーボードモジュール、adafruit_hidの日本語キーボード配列モジュールです。
+Raspberry pi pico の Circuitpythonで提供されているUSBキーボードモジュール、  
+adafruit_hidの**日本語キーボード配列**モジュールです。  
 以下のようなキーが日本語配列で送信できます。
 
 [@_\|￥"'^= 半角/全角 無変換 変換]
@@ -13,7 +14,8 @@ CircuitPythonをRaspberry pi picoに導入後、以下のフォルダに配置�
 ![/xxx/xxx/Circuitpython/lib/adafruit_hid/](folder.png)
 
 # サンプルプログラム
-入力した文字をUSBキーボードとして送信するプログラム
+入力した文字をUSBキーボードとして送信するプログラム  
+(Shiftキーは認識されます。Aと入力すればa+shiftとなります)
 ```
 from adafruit_hid.keycode import Keycode
 from adafruit_hid.keyboard import Keyboard
