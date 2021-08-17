@@ -14,7 +14,7 @@ CircuitPythonをRaspberry pi picoに導入後、以下のフォルダに配置�
 
 # サンプルプログラム
 入力した文字をUSBキーボードとして送信するプログラム
-'''
+```
 from adafruit_hid.keycode import Keycode
 from adafruit_hid.keyboard import Keyboard
 from adafruit_hid.keyboard_layout_jp import KeyboardLayoutJP
@@ -26,8 +26,8 @@ layout = KeyboardLayoutJP(keyboard)
 # キーボードの半角文字しか送れません。
 # 全角を送りたい場合は全角ボタンを送信後にwriteする必要があります
 layout.write("abc-ABC\+= ..,,<>@")
-
-'''
+```
+ 
 特殊キーの送信の仕方
 （お待ちください）
 
