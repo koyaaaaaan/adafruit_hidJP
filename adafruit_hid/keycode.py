@@ -65,7 +65,7 @@ class Keycode:
     POUND = 0x32
     COLON = 0x34
     SEMICOLON = 0x33
-    GRAVE_ACCENT = 0x35
+    GRAVE_ACCENT = 0x35 # かな/英数変換キー
     COMMA = 0x36
     PERIOD = 0x37
     FORWARD_SLASH = 0x38
