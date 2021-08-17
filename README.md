@@ -14,7 +14,8 @@ CircuitPythonをRaspberry pi picoに導入後、以下のフォルダに配置�
 ![/xxx/xxx/Circuitpython/lib/adafruit_hid/](folder.png)
 
 # サンプルプログラム
-入力した文字をUSBキーボードとして送信するプログラム
+入力した文字をUSBキーボードとして送信するプログラム  
+(Shiftキーは認識されます。Aと入力すればa+shiftとなります)
 ```
 from adafruit_hid.keycode import Keycode
 from adafruit_hid.keyboard import Keyboard
