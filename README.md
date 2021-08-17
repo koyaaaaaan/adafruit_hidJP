@@ -4,7 +4,7 @@ Sorry to describe only in Japanese.
 
 # 概要
 Raspberry pi pico の Circuitpythonで提供されているUSBキーボードモジュール、  
-adafruit_hidの*日本語キーボード配列*モジュールです。  
+adafruit_hidの**日本語キーボード配列**モジュールです。  
 以下のようなキーが日本語配列で送信できます。
 
 [@_\|￥"'^= 半角/全角 無変換 変換]
