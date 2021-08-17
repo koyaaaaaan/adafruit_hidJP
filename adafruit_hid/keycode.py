@@ -168,7 +168,9 @@ class Keycode:
     # pylint: enable-msg=invalid-name
     @classmethod
     def modifier_bit(cls, keycode):
-        if keycode in [LEFT_CONTROL,LEFT_SHIFT,LEFT_ALT,OPTION,LEFT_GUI,WINDOWS,COMMAND,RIGHT_CONTROL,RIGHT_SHIFT,RIGHT_ALT,RIGHT_GUI]:
-            return True
-        else:
-            return False
+        try:
+            return (
+                1 << (keycode - 0xE0) if cls.LEFT_CONTROL <= keycode <= cls.RIGHT_GUI else 0
+            )
+        except:
+            return false
