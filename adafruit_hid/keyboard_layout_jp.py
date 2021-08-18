@@ -40,8 +40,8 @@ class KeyboardLayoutJP:
         ["~", 0x2e ,True],
         ["¥", 0x89 ,False],
         ["|", 0x89 ,True],
-        ["\t", 0x002b ,True],
-        ["  ", 0x002b ,True],
+        ["\t", 0x002b ,False],
+        ["	", 0x002b ,False],
         ["q", 0x14 ,False],
         ["Q", 0x14 ,True],
         ["w", 0x1a ,False],
@@ -113,7 +113,9 @@ class KeyboardLayoutJP:
         ["\\", 0x87 ,False],
         ["_", 0x87 ,True],
         [" ", 0x2c ,False],
-        ["\n", 0x28 ,False]
+        ["\n", 0x28 ,False],
+        ["""
+""", 0x28 ,False]
     ]
 
     def __init__(self, keyboard):
