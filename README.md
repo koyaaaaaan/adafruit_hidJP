@@ -28,6 +28,9 @@ layout = KeyboardLayoutJP(keyboard)
 # キーボードの半角文字しか送れません。
 # 全角を送りたい場合は全角ボタンを送信後にwriteする必要があります
 layout.write("abc-ABC\+= ..,,<>@")
+
+# タブを送信する場合はタブを直接指定してください
+layout.write("tabtest  tabtest  tabtest")
 ```
  
 # キーコードで送信する場合について
