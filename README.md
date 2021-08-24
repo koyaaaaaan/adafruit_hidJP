@@ -23,6 +23,7 @@ CircuitPythonをRaspberry pi picoに導入後、以下のフォルダに配置�
 入力した文字をUSBキーボードとして送信するプログラム  
 (Shiftキーは認識されます。Aと入力すればa+shiftとなります)
 ```
+import usb_hid
 from adafruit_hid.keycode import Keycode
 from adafruit_hid.keyboard import Keyboard
 from adafruit_hid.keyboard_layout_jp import KeyboardLayoutJP
