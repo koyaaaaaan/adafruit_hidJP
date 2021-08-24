@@ -40,6 +40,30 @@ keycode.pyに羅列されています
 
 特殊キーの送信の仕方サンプルプログラム
 ```
-（お待ちください）
+import usb_hid
+from adafruit_hid.keycode import Keycode
+from adafruit_hid.keyboard import Keyboard
+
+keyboard = Keyboard(usb_hid.devices)
+
+# キーコードは adafruit_hid/keycode.py を参照
+# 通常の文字
+keyboard.send(Keycode.A)
+keyboard.send(Keycode.B)
+keyboard.send(Keycode.ONE)
+keyboard.send(Keycode.TWO)
+keyboard.send(Keycode.SPACE)
+keyboard.send(Keycode.COMMA)
+
+# ファンクション等特殊キー
+keyboard.send(Keycode.F1)
+keyboard.send(Keycode.PRINT_SCREEN)
+keyboard.send(Keycode.BACKSPACE)
+
+# 複合キー
+keyboard.send(Keycode.SHIFT, Keycode.A)
+keyboard.send(Keycode.ALT, Keycode.A)
+keyboard.send(Keycode.CONTROL, Keycode.S)
+keyboard.send(Keycode.CONTROL,Keycode.SHIFT,Keycode.ALT, Keycode.A)
 ```
 
