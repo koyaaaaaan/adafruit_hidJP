@@ -9,7 +9,7 @@ adafruit_hidの**日本語キーボード配列**モジュールです。
 
 
 # 対応しているボード
-Raspberry py Pico
+Raspberry py Pico (要CircuitPythonインストール)
 
 
 # 利用方法
