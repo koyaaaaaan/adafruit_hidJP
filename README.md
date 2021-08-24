@@ -2,24 +2,24 @@
 This project is for Japanese keyboard type 106 or 109.
 Sorry to describe only in Japanese.
 
-# 概要
-Raspberry pi pico の Circuitpythonで提供されているUSBキーボードモジュール、  
-adafruit_hidの**日本語キーボード配列**モジュールです。  
+# adafruit_hidJPについて
+Raspberry pi pico の Circuitpythonで提供されているUSBキーボードモジュールであるadafruit_hidの**日本語キーボード配列対応版**モジュールです。  
 英語キーボードでは操作できない、アンダースコア・変換キーなどを送信することができます。
 
 
-# 対応しているボード
+### 対応しているボード
 Raspberry py Pico (要CircuitPythonインストール)
 
 
-# 利用方法
+### 導入方法
 CircuitPythonをRaspberry pi picoに導入後、以下のフォルダに配置してください
 ![/xxx/xxx/Circuitpython/lib/adafruit_hid/](folder.png)
 
 その後、サンプルプログラムを Raspberry py Pico 内の code.py に書き込むことで動作します。
 （必要に応じて、スイッチなどを自分で追加実装してください。）
 
-# サンプルプログラム１　文字列を送信
+# サンプルプログラム
+### 文字列を送信
 入力した文字をUSBキーボードとして送信するプログラム  
 (Shiftキーは認識されます。Aと入力すればa+shiftとなります)
 ```
@@ -39,7 +39,7 @@ layout.write("abc-ABC\+= ..,,<>@")
 layout.write("tabtest  tabtest  tabtest")
 ```
  
-# サンプルプログラム２　キーコード指定で送信
+### キーコード指定で送信
 Functionキーなど、特殊キーを送信する場合はキーコードを指定します。
 keycode.pyに羅列されています
 
