@@ -12,7 +12,8 @@ Raspberry py Pico (要CircuitPythonインストール)
 
 
 ### 導入方法
-CircuitPythonをRaspberry pi picoに導入後、以下のフォルダに配置してください
+CircuitPythonをRaspberry pi picoに導入後、以下のフォルダに配置してください。  
+(CircuitPythonを導入すると、PicoがUSBメモリとして認識されて以下のフォルダにアクセスできます。)
 ![/xxx/xxx/Circuitpython/lib/adafruit_hid/](folder.png)
 
 その後、サンプルプログラムを Raspberry py Pico 内の code.py に書き込むことで動作します。
