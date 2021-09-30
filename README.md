@@ -10,7 +10,8 @@ adafruit_hidの**日本語キーボード配列**モジュールです。
 [@_\|￥"'^= 半角/全角 無変換 変換]
 
 # 利用方法
-CircuitPythonをRaspberry pi picoに導入後、以下のフォルダに配置してください
+CircuitPythonをRaspberry pi picoに導入後、以下のフォルダに配置してください。  
+CircuitPythonのバージョンが6.x以前と7.x以降ではmpyの形式が違うので、必要な方を利用してください。  
 ![/xxx/xxx/Circuitpython/lib/adafruit_hid/](folder.png)
 
 # サンプルプログラム
