@@ -2,22 +2,28 @@
 This project is for Japanese keyboard type 106 or 109.
 Sorry to describe only in Japanese.
 
-# 概要
-Raspberry pi pico の Circuitpythonで提供されているUSBキーボードモジュール、  
-adafruit_hidの**日本語キーボード配列**モジュールです。  
-以下のようなキーが日本語配列で送信できます。
+# adafruit_hidJPについて
+Raspberry pi pico の Circuitpythonで提供されているUSBキーボードモジュールであるadafruit_hidの**日本語キーボード配列対応版**モジュールです。  
+英語キーボードでは操作できない、アンダースコア・変換キーなどを送信することができます。
 
-[@_\|￥"'^= 半角/全角 無変換 変換]
+### 対応しているボード
+Raspberry py Pico (要CircuitPythonインストール)
 
-# 利用方法
+### 導入方法
 CircuitPythonをRaspberry pi picoに導入後、以下のフォルダに配置してください。  
 CircuitPythonのバージョンが6.x以前と7.x以降ではmpyの形式が違うので、必要な方を利用してください。  
+(CircuitPythonを導入すると、PicoがUSBメモリとして認識されて以下のフォルダにアクセスできます。)  
 ![/xxx/xxx/Circuitpython/lib/adafruit_hid/](folder.png)
 
+その後、サンプルプログラムを Raspberry py Pico 内の code.py に書き込むことで動作します。
+（必要に応じて、スイッチなどを自分で追加実装してください。）
+
 # サンプルプログラム
+### 文字列を送信
 入力した文字をUSBキーボードとして送信するプログラム  
 (Shiftキーは認識されます。Aと入力すればa+shiftとなります)
 ```
+import usb_hid
 from adafruit_hid.keycode import Keycode
 from adafruit_hid.keyboard import Keyboard
 from adafruit_hid.keyboard_layout_jp import KeyboardLayoutJP
@@ -29,15 +35,42 @@ layout = KeyboardLayoutJP(keyboard)
 # キーボードの半角文字しか送れません。
 # 全角を送りたい場合は全角ボタンを送信後にwriteする必要があります
 layout.write("abc-ABC\+= ..,,<>@")
+
+# タブを送信する場合はタブを直接指定してください
+layout.write("tabtest  tabtest  tabtest")
 ```
  
-# キーコードで送信する場合について
+### キーコード指定で送信
 Functionキーなど、特殊キーを送信する場合はキーコードを指定します。
 keycode.pyに羅列されています
 
 
 特殊キーの送信の仕方サンプルプログラム
 ```
-（お待ちください）
+import usb_hid
+from adafruit_hid.keycode import Keycode
+from adafruit_hid.keyboard import Keyboard
+
+keyboard = Keyboard(usb_hid.devices)
+
+# キーコードは adafruit_hid/keycode.py を参照
+# 通常の文字
+keyboard.send(Keycode.A)
+keyboard.send(Keycode.B)
+keyboard.send(Keycode.ONE)
+keyboard.send(Keycode.TWO)
+keyboard.send(Keycode.SPACE)
+keyboard.send(Keycode.COMMA)
+
+# ファンクション等特殊キー
+keyboard.send(Keycode.F1)
+keyboard.send(Keycode.PRINT_SCREEN)
+keyboard.send(Keycode.BACKSPACE)
+
+# 複合キー
+keyboard.send(Keycode.SHIFT, Keycode.A)
+keyboard.send(Keycode.ALT, Keycode.A)
+keyboard.send(Keycode.CONTROL, Keycode.S)
+keyboard.send(Keycode.CONTROL,Keycode.SHIFT,Keycode.ALT, Keycode.A)
 ```
 
