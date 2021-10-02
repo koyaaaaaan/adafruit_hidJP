@@ -21,7 +21,6 @@ CircuitPythonのバージョンが6.x以前と7.x以降ではmpyの形式が違�
 # サンプルプログラム
 ### 文字列を送信
 入力した文字をUSBキーボードとして送信するプログラム  
-(Shiftキーは認識されます。Aと入力すればa+shiftとなります)
 ```
 import usb_hid
 from adafruit_hid.keycode import Keycode
