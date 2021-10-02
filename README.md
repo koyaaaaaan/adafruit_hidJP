@@ -7,7 +7,7 @@ Raspberry pi pico の Circuitpythonで提供されているUSBキーボードモ
 英語キーボードでは操作できない、アンダースコア・変換キーなどを送信することができます。
 
 ### 対応しているボード
-Raspberry py Pico (要CircuitPythonインストール)
+Raspberry pi pico (要CircuitPythonインストール)
 
 ### 導入方法
 CircuitPythonをRaspberry pi picoに導入後、以下のフォルダに配置してください。  
